@@ -19,13 +19,6 @@ except:
     have_cython = False
 
 
-# setuptools DWIM monkey-patch madness
-# http://mail.python.org/pipermail/distutils-sig/2007-September/thread.html#8204
-import sys
-if 'setuptools.extension' in sys.modules:
-    m = sys.modules['setuptools.extension']
-    m.Extension.__dict__ = m._Extension.__dict__
-
 context_dir = os.path.join(os.path.dirname(__file__), 'contexts')
 
 def download_osmesa():
