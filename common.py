@@ -18,7 +18,7 @@ from contexts._constants import *
 def nanmean(a, axis):
     # don't call nan_to_num in here, unless you check that
     # occlusion_test.py still works after you do it!
-    result = scipy.stats.nanmean(a, axis=axis)
+    result = np.nanmean(a, axis=axis)
     return result
 
 def nangradients(arr):
